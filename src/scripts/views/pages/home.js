@@ -5,14 +5,14 @@ const Home = {
         <div class="jumbotron text-center text-sm-left bg-transparent row wrapper">
           <div class="col-md left-column">
             <p class="lead d-inline-block content-title">
-              <img src="./icons/virus-lab-research-magnifier-2.svg" alt="" srcset="">
+              <img src="./assets/icons/virus-lab-research-magnifier-2.svg" alt="" srcset="">
               <span>Waspada Covid</span>
             </p>
             <h1>Aku, Kamu, Kita Semua </br><span class="two">Bisa Kalahkan</span></br> <span class="three">Covid-19</span></h1>
             <a class="btn btn-primary btn-lg rounded-pill btn-tentang" href="#" role="button">Tentang</a>  
           </div>
           <div class="col-md right-column p-0">
-            <img src="./images/hero_image.png" alt="Hero Image" class="w-100">
+            <img src="./assets/images/hero_image.png" alt="Hero Image" class="w-100">
           </div>
         </div>
         <div class="data-wrapper">
@@ -48,7 +48,7 @@ const Home = {
         <div class="wrapper text-center row">
             <div class="section-header col-12 mb-5">
               <p class="lead d-inline-block content-title">
-                <img src="./icons/vaccine-protection-shield.svg" alt="" srcset="">
+                <img src="./assets/icons/vaccine-protection-shield.svg" alt="" srcset="">
                 <span>Protokol</span>
               </p>
               <h2 class="section-header-text">Patuhi Protokol Kesehatan Agar Terhindar Dari Covid-19</h2>
@@ -57,7 +57,7 @@ const Home = {
               <div class="row">
                 <div class="col-12 col-md-6 ilustration-wrapper d-lg-flex d-md-flex align-items-center mb-5">
                     <div class="ilustration-image">
-                      <img src="./images/maskman.png" alt="Orang menggunakan masker" class="w-100 h-auto">
+                      <img src="./assets/images/maskman.png" alt="Orang menggunakan masker" class="w-100 h-auto">
                     </div>
                     <div class="ilustration-text mt-3">
                       <h3 class="text-left font-weight-bold">Memakai Masker</h3>
@@ -66,7 +66,7 @@ const Home = {
                 </div>
                 <div class="col-12 col-md-6 ilustration-wrapper d-lg-flex d-md-flex align-items-center mb-5">
                     <div class="ilustration-image">
-                      <img src="./images/washinghand.png" alt="orang mencuci tangan" class="w-100 h-auto">
+                      <img src="./assets/images/washinghand.png" alt="orang mencuci tangan" class="w-100 h-auto">
                     </div>
                     <div class="ilustration-text mt-3">
                       <h3 class="text-left font-weight-bold">Mencuci Tangan</h3>
@@ -77,7 +77,7 @@ const Home = {
               <div class="row">
                 <div class="col-12 col-md-6 ilustration-wrapper d-lg-flex d-md-flex align-items-center mb-5">
                     <div class="ilustration-image">
-                      <img src="./images/market.png" alt="pasar swalayan" class="w-100 h-auto">
+                      <img src="./assets/images/market.png" alt="pasar swalayan" class="w-100 h-auto">
                     </div>
                     <div class="ilustration-text mt-3">
                       <h3 class="text-left font-weight-bold">Hindari Swalayan</h3>
@@ -86,7 +86,7 @@ const Home = {
                 </div>
                 <div class="col-12 col-md-6 ilustration-wrapper d-lg-flex d-md-flex align-items-center mb-5">
                     <div class="ilustration-image">
-                      <img src="./images/coughing.jpg" alt="Orang batuk menutup mulut" class="w-100 h-auto">
+                      <img src="./assets/images/coughing.jpg" alt="Orang batuk menutup mulut" class="w-100 h-auto">
                     </div>
                     <div class="ilustration-text mt-3">
                       <h3 class="text-left font-weight-bold">Menutup Mulut Bila Batuk</h3>
@@ -101,7 +101,7 @@ const Home = {
       <div class="wrapper text-center row">
           <div class="section-header col-12 mb-3">
               <p class="lead d-inline-block content-title">
-                  <img src="./icons/Date_range_duotone_line.svg" alt="" srcset="">
+                  <img src="./assets/icons/Date_range_duotone_line.svg" alt="" srcset="">
                   <span>Vaksinasi</span>
               </p>
               <h2 class="section-header-text">Ayo Vaksinasi!</h2>
