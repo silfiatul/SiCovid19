@@ -1,0 +1,163 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: poppins, 'Courier New', Courier, monospace;
+}
+
+#mainContent {
+  min-height: 100vh;
+}
+
+header .navbar-brand {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+header .nav-link {
+  font-size: 18px;
+}
+
+header .nav-link:hover {
+  color: #ea4559 !important;
+}
+
+header button {
+  font-size: 1.5rem !important;
+  border: none !important;
+}
+
+header .btn {
+  border-radius: 14px !important;
+}
+header .btn-login {
+  color: #ea4559 !important;
+  border-block: 3px solid #ea4559;
+  border: 3px solid #ea4559;
+}
+
+header .btn-signin {
+  color: #fff !important;
+  background-color: #ea4559;
+}
+
+.nav-item .nav-link.active {
+  color: #ea4559 !important;
+}
+
+/* *Home */
+section#home {
+  color: #151d41 !important;
+}
+
+.jumbotron .left-column {
+  font-size: 36px !important;
+  font-weight: bold !important;
+}
+
+.jumbotron span.two {
+  font-size: 48px !important;
+}
+
+.jumbotron span.three {
+  font-size: 60px !important;
+  font-weight: bolder !important;
+  color: #ea4559 !important;
+}
+
+.btn-tentang {
+  background-color: #ea4559 !important;
+  border: none;
+  padding: 10px 30px;
+  margin-top: 50px;
+}
+
+.content-title {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #ea4559;
+  background-color: rgba(234, 69, 89, 0.25);
+}
+
+/* Table data */
+.data-wrapper {
+  padding: 37px 0px;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: rgba(234, 69, 89, 0.25);
+}
+
+.data-title {
+  display: inline-block;
+}
+
+.count-data {
+  font-size: 32px;
+}
+
+/* *Protokol */
+section#protokol {
+  color: #151d41;
+}
+.section-header-text {
+  font-weight: bold;
+  font-size: 36px;
+}
+.ilustration-image {
+  min-width: 150px;
+  max-width: 250px;
+  width: 100%;
+}
+.ilustration-text {
+  padding-left: 15px;
+}
+
+.ilustration-text h3 {
+  font-size: 21px;
+}
+
+/* *Vaksinasi */
+section#vaksinasi {
+  color: #151d41;
+}
+#filterProvinsi,
+#filterKota,
+.btn-temukan {
+  border-radius: 20px;
+  border: #ea4559 solid 1px;
+}
+
+#filterProvinsi,
+#filterKota {
+  padding: 0 84px;
+}
+
+.btn-temukan {
+  padding: 8px 25px !important;
+  background-color: #ea4559;
+}
+
+.list-vaksinasi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  justify-content: space-evenly;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.card-body {
+  color: #151d41;
+}
+
+.card-title {
+  color: #ea4559;
+}
+
+.btn-selengkapnya {
+  background-color: #ea4559 !important;
+}
+
+footer {
+  background-color: #151d41;
+}
