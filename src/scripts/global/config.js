@@ -1,6 +1,6 @@
 const CONFIG = {
   HOSTNAME: 'localhost',
-  PORT: 3000,
+  PORT: process.env.PORT || 3000,
   BASE_URL_COVID: 'https://api.covid19.bnn.go.id/v3/covid-19',
   BASE_URL_VAKSIN: 'https://api.vaksinasi.id',
   CACHE_NAME: 'SiCovid19-V1',
