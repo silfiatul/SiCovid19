@@ -4,8 +4,6 @@ const Login = {
         <h1>Login</h1>
         `;
   },
-
-  afterRender() {},
 };
 
 module.exports = Login;

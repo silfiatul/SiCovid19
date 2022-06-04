@@ -1,16 +1,23 @@
-import Home from '../views/pages/home';
-import Forum from '../views/pages/forum';
-import Login from '../views/pages/login';
-import Signin from '../views/pages/signin';
-import Vaksinasi from '../views/pages/vaksinasi';
+const express = require('express');
+const {
+  homePage,
+  forumPage,
+  loginPage,
+  signinPage,
+} = require('../controller/handlers');
 
-const routes = {
-  '/': Home,
-  '/home': Home,
-  '/forum': Forum,
-  '/vaksinasi': Vaksinasi,
-  '/login': Login,
-  '/signin': Signin,
-};
+const router = express.Router();
 
-export default routes;
+// * Home Page
+router.get('/', homePage);
+router.get('/home', homePage);
+// * Forum  Page
+router.get('/forum', forumPage);
+// * Login Page
+router.get('/login', loginPage);
+router.post('/login', loginPage);
+// * SignIn Page
+router.get('/signin', signinPage);
+router.post('/signin', signinPage);
+
+module.exports = router;
