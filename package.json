@@ -35,11 +35,11 @@
     "webpack-pwa-manifest": "^4.3.0"
   },
   "scripts": {
-    "start": "concurrently \"npm:build\" \"npm:server\"",
+    // "start": "concurrently \"npm:build\" \"npm:server\"",
     "start-express": "nodemon src/scripts/server/server.js",
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "server": "node ./server.js"
+    "start": "node ./server.js"
   },
   "repository": {
     "type": "git",
