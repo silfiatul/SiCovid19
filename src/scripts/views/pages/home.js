@@ -18,7 +18,7 @@ const Home = {
               <span>Waspada Covid/span>
             </p>
             <h1>Aku, Kamu, Kita Semua </br><span class="two">Bisa Kalahkan</span></br> <span class="three">Covid-19</span></h1>
-            <a class="btn btn-primary btn-lg rounded-pill btn-tentang" href="#" role="button">Tentang</a>  
+            <a class="btn btn-primary btn-lg rounded-pill btn-ayovaksin" href="#vaksinasi" role="button">Ayo Vaksin</a>  
           </div>
           <div class="col-md right-column p-0">
             <img src="./assets/images/hero_image.png" alt="Hero Image" class="w-100">

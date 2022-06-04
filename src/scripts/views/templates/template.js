@@ -27,7 +27,7 @@ const createTemplateCardVaksinasi = (cardDataItem) => {
                   <li class="list-group-item pt-0">${item.address}</li>
                   <li class="list-group-item pt-0"><a href="${
                     item.map
-                  }">Open Map</a></li>
+                  }" target="_blank">Open Map</a></li>
                 </ul>
               </li>
               <li class="list-group-item p-0">Hari Operasional : 
