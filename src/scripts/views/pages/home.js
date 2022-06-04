@@ -1,4 +1,3 @@
-const $ = require('jquery');
 const API_ENDPOINT = require('../../global/apiEndpoint');
 const CONFIG = require('../../global/config');
 
