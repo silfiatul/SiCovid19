@@ -1,11 +1,10 @@
-import { BASE_URL_COVID, BASE_URL_VAKSIN } from './config';
+const { BASE_URL_COVID, BASE_URL_VAKSIN } = require('./config');
 
 const API_ENDPOINT = {
-  KASUS_HARIAN: `${BASE_URL_COVID}/update.json`,
-  KASUS_HARIAN_PROV: `${BASE_URL_COVID}/prov.json`,
-  RISK_PROV: `${BASE_URL_COVID}/skor.json`,
+  KASUS_HARIAN: `${BASE_URL_COVID}/countries/id?strict=true`,
   REGIONS: `${BASE_URL_VAKSIN}/regions`,
-  LOCATION: (province, city) => `${BASE_URL_VAKSIN}/${province}?=${city}`,
+  LOCATION: (province, city) =>
+    `${BASE_URL_VAKSIN}/locations/${province}?city=${city}`,
 };
 
-export default API_ENDPOINT;
+module.exports = API_ENDPOINT;

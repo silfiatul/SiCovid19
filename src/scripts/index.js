@@ -5,12 +5,11 @@ import '../css/responsive.css';
 import '../css/custom.css';
 import './views/templates/template';
 import './data/sourceAPI';
+import './utils/ajax';
 import App from './views/App';
 import swRegister from './utils/sw-register';
 
 const app = new App({
-  button: document.querySelector('.navbar-toggler'),
-  drawer: document.querySelector('#navbarSupportedContent'),
   content: document.querySelector('#mainContent'),
 });
 

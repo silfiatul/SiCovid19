@@ -1,11 +1,11 @@
 const Login = {
-  async render() {
+  render() {
     return `
         <h1>Login</h1>
         `;
   },
 
-  async afterRender() {},
+  afterRender() {},
 };
 
 module.exports = Login;

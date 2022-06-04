@@ -1,9 +1,13 @@
+const Home = require('../views/pages/home');
 const Forum = require('../views/pages/forum');
 const Login = require('../views/pages/login');
 const Signin = require('../views/pages/signin');
 
 const Handler = {
-  discussionForumPage: (req, res) => {
+  homePage: (req, res) => {
+    res.send(Home.render());
+  },
+  forumPage: (req, res) => {
     res.send(Forum.render());
   },
   loginPage: (req, res) => {

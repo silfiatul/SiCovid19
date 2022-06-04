@@ -1,3 +1,12 @@
+const $ = require('jquery');
+const API_ENDPOINT = require('../../global/apiEndpoint');
+const CONFIG = require('../../global/config');
+
+const {
+  createTemplateOption,
+  createTemplateCardVaksinasi,
+} = require('../../views/templates/template.js');
+
 const Home = {
   async render() {
     return `
@@ -6,7 +15,7 @@ const Home = {
           <div class="col-md left-column">
             <p class="lead d-inline-block content-title">
               <img src="./assets/icons/virus-lab-research-magnifier-2.svg" alt="" srcset="">
-              <span>Waspada Covid</span>
+              <span>Waspada Covid/span>
             </p>
             <h1>Aku, Kamu, Kita Semua </br><span class="two">Bisa Kalahkan</span></br> <span class="three">Covid-19</span></h1>
             <a class="btn btn-primary btn-lg rounded-pill btn-tentang" href="#" role="button">Tentang</a>  
@@ -19,26 +28,26 @@ const Home = {
           <div class="data-covid row text-center">
             <div class="col-12 col-md-4 col-sm-6">
               <div class="data-title">
-                <p class="m-0">Kasus Harian</p>
+                <p class="m-0">Kasus</p>
               </div>
               <div class="count-data">
-                <p data-covid="harian"></p>
+                <p data-covid="kasus" class="text-warning"></p>
               </div>
             </div>
             <div class="col-12 col-md-4 col-sm-6">
               <div class="data-title">
-                <p class="m-0">Kasus Harian Provinsi</p>
+                <p class="m-0">Kematian</p>
               </div>
               <div class="count-data">
-                <p data-covid="harianProv"></p>
+                <p data-covid="kematian" class="text-danger"></p>
               </div>
             </div>
             <div class="col-12 col-md-4 col-sm-12">
               <div class="data-title">
-                <p class="m-0">Resiko Covid Provinsi</p>
+                <p class="m-0">Sembuh</p>
               </div>
               <div class="count-data">
-                <p data-covid="riskProv"></p>
+                <p data-covid="sembuh" class="text-success"></p>
               </div>
             </div>
           </div>
@@ -110,11 +119,11 @@ const Home = {
               <form method="get" class="form-inline justify-content-center">
                   <select class="form-control custom-select mr-sm-2 mb-2 mb-lg-0 text-center" id="filterProvinsi">
                       <option selected>Provinsi</option>
-                      <option value="0" name="0">Sumatera Utara</option>
+                      <option value="0" name="0" data-wilayah="provinsi">...</option>
                   </select>
                   <select class="form-control custom-select mr-sm-2 mb-2 mb-lg-0 text-center" id="filterKota">
                       <option selected>Kabupaten/Kota</option>
-                      <option value="0" name="0">...</option>
+                      <option value="0" name="0" data-wilayah="kota">...</option>
                   </select>
                   <button type="submit" class="btn btn-primary btn-temukan">Temukan</button>
               </form>
@@ -122,256 +131,43 @@ const Home = {
           <div class="vaksinasi-wrapper col-12 mt-5">
               <h5 class="text-center mb-3">Daftar Vaksinasi</h5>
               <div class="list-vaksinasi">
-
-                  <div class="vaksinasi-item text-left">
-                      <div class="card p-3">
-                        <div class="card-body">
-                          <h5 class="card-title">Sumatera - Binjai</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Puskesmas Kebun lada</h6>
-                          <div class="card-text mb-2">
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item p-0">Alamat : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">Jln. Talam No. 28</li>
-                                </ul>
-                              </li>
-                              <li class="list-group-item p-0">Hari Operasional : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">2021/07/31 - 2021/03/31</li>
-                                </ul>
-                              </li>
-                              <li class="list-group-item p-0">Waktu Operasional : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">08:00:00 - 12:00:00</li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </div>
-                          <p class="mb-0">Pendaftaran : Walk-in</p>
-                          <p class="ml-auto text-danger">Gratis</p>
-                        </div>
-                        <button type="button" class="btn btn-secondary btn-selengkapnya" data-toggle="modal" data-target="#selengkapnya">Selengkapnya</button>
-                      </div>
-                  </div>
-                  
-                  <div class="vaksinasi-item text-left">
-                      <div class="card p-3">
-                        <div class="card-body">
-                          <h5 class="card-title">Sumatera - Binjai</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Puskesmas Kebun lada</h6>
-                          <div class="card-text mb-2">
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item p-0">Alamat : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">Jln. Talam No. 28</li>
-                                </ul>
-                              </li>
-                              <li class="list-group-item p-0">Hari Operasional : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">2021/07/31 - 2021/03/31</li>
-                                </ul>
-                              </li>
-                              <li class="list-group-item p-0">Waktu Operasional : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">08:00:00 - 12:00:00</li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </div>
-                          <p class="mb-0">Pendaftaran : Walk-in</p>
-                          <p class="ml-auto text-danger">Gratis</p>
-                        </div>
-                        <button type="button" class="btn btn-secondary btn-selengkapnya" data-toggle="modal" data-target="#selengkapnya">Selengkapnya</button>
-                      </div>
-                  </div>
-                  
-                  <div class="vaksinasi-item text-left">
-                      <div class="card p-3">
-                        <div class="card-body">
-                          <h5 class="card-title">Sumatera - Binjai</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Puskesmas Kebun lada</h6>
-                          <div class="card-text mb-2">
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item p-0">Alamat : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">Jln. Talam No. 28</li>
-                                </ul>
-                              </li>
-                              <li class="list-group-item p-0">Hari Operasional : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">2021/07/31 - 2021/03/31</li>
-                                </ul>
-                              </li>
-                              <li class="list-group-item p-0">Waktu Operasional : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">08:00:00 - 12:00:00</li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </div>
-                          <p class="mb-0">Pendaftaran : Walk-in</p>
-                          <p class="ml-auto text-danger">Gratis</p>
-                        </div>
-                        <button type="button" class="btn btn-secondary btn-selengkapnya" data-toggle="modal" data-target="#selengkapnya">Selengkapnya</button>
-                      </div>
-                  </div>
-                  
-                  <div class="vaksinasi-item text-left">
-                      <div class="card p-3">
-                        <div class="card-body">
-                          <h5 class="card-title">Sumatera - Binjai</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Puskesmas Kebun lada</h6>
-                          <div class="card-text mb-2">
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item p-0">Alamat : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">Jln. Talam No. 28</li>
-                                </ul>
-                              </li>
-                              <li class="list-group-item p-0">Hari Operasional : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">2021/07/31 - 2021/03/31</li>
-                                </ul>
-                              </li>
-                              <li class="list-group-item p-0">Waktu Operasional : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">08:00:00 - 12:00:00</li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </div>
-                          <p class="mb-0">Pendaftaran : Walk-in</p>
-                          <p class="ml-auto text-danger">Gratis</p>
-                        </div>
-                        <button type="button" class="btn btn-secondary btn-selengkapnya" data-toggle="modal" data-target="#selengkapnya">Selengkapnya</button>
-                      </div>
-                  </div>
-                  
-                  <div class="vaksinasi-item text-left">
-                      <div class="card p-3">
-                        <div class="card-body">
-                          <h5 class="card-title">Sumatera - Binjai</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Puskesmas Kebun lada</h6>
-                          <div class="card-text mb-2">
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item p-0">Alamat : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">Jln. Talam No. 28</li>
-                                </ul>
-                              </li>
-                              <li class="list-group-item p-0">Hari Operasional : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">2021/07/31 - 2021/03/31</li>
-                                </ul>
-                              </li>
-                              <li class="list-group-item p-0">Waktu Operasional : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">08:00:00 - 12:00:00</li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </div>
-                          <p class="mb-0">Pendaftaran : Walk-in</p>
-                          <p class="ml-auto text-danger">Gratis</p>
-                        </div>
-                        <button type="button" class="btn btn-secondary btn-selengkapnya" data-toggle="modal" data-target="#selengkapnya">Selengkapnya</button>
-                      </div>
-                  </div>
-                  
-                  <div class="vaksinasi-item text-left">
-                      <div class="card p-3">
-                        <div class="card-body">
-                          <h5 class="card-title">Sumatera - Binjai</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Puskesmas Kebun lada</h6>
-                          <div class="card-text mb-2">
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item p-0">Alamat : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">Jln. Talam No. 28</li>
-                                </ul>
-                              </li>
-                              <li class="list-group-item p-0">Hari Operasional : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">2021/07/31 - 2021/03/31</li>
-                                </ul>
-                              </li>
-                              <li class="list-group-item p-0">Waktu Operasional : 
-                                <ul class="list-group list-group-flush">
-                                  <li class="list-group-item pt-0">08:00:00 - 12:00:00</li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </div>
-                          <p class="mb-0">Pendaftaran : Walk-in</p>
-                          <p class="ml-auto text-danger">Gratis</p>
-                        </div>
-                        <button type="button" class="btn btn-secondary btn-selengkapnya" data-toggle="modal" data-target="#selengkapnya">Selengkapnya</button>
-                      </div>
-                  </div>
-                  
+                <div class="loader lds-spinner m-auto"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
               </div>
           </div>
       </div>
     </section>
-    <!-- Modal -->
-    <div class="modal fade" id="selengkapnya" tabindex="-1" aria-labelledby="selengkapnyaLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="selengkapnyaLabel">Vaksinasi</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row mb-1">
-                <div class="col-md-12"><p class="small m-0">Provinsi</p></div>
-                <div class="col-md-12"><h5>Sumatera Utara</h5></div>
-              </div>
-              <div class="row mb-1">
-                <div class="col-md-12"><p class="small m-0">Kota</p></div>
-                <div class="col-md-12"><h5>Binjai</h5></div>
-              </div>
-              <div class="row mb-1">
-                <div class="col-md-12"><p class="small m-0">Lokasi</p></div>
-                <div class="col-md-12"><h5>Puskesmas XYZ</h5></div>
-                <div class="col-md-12"><h5>Jl. Turiam No.40 kel.Pahlawan kec.Binjai Utara</h5></div>
-                <div class="col-md-12"><a href="https://goo.gl/maps/XSi7bZCrDTFaMAme8">Open Google Map</a></div>
-              </div>
-              <div class="row mb-1">
-                <div class="col-md-12"><p class="small m-0">Hari Operasional</p></div>
-                <div class="col-md-12"><h5>2021/07/31 - 2021/03/31</h5></div>
-              </div>
-              <div class="row mb-1">
-                <div class="col-md-12"><p class="small m-0">Usia</p></div>
-                <div class="col-md-12"><h5>Dewasa (18-59 Tahun)</h5></div>
-                <div class="col-md-12"><h5>Lansia (60- )</h5></div>
-              </div>
-              <div class="row mb-1">
-                <div class="col-md-12"><p class="small m-0">Deskripsi</p></div>
-                <div class="col-md-12"><h5>Dosis 1&2/Memiliki KTP atau surat domisili kelurahan tanah kalikedinding</h5></div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
     `;
   },
 
   async afterRender() {
-    const KasusHarian = document.querySelector("[data-covid='harian']");
-    const KasusHarianProv = document.querySelector("[data-covid='harianProv']");
-    const riskProv = document.querySelector("[data-covid='riskProv']");
+    /* *Data from API https://api.covid19.bnn.go.id/v3/covid-19 */
+    const settingsCovid = {
+      url: `${API_ENDPOINT.KASUS_HARIAN}`,
+      method: 'GET',
+      timeout: 0,
+    };
+    $.ajax(settingsCovid).done((response) => {
+      $("[data-covid='kasus']").append(response.cases);
+      $("[data-covid='kematian']").append(response.deaths);
+      $("[data-covid='sembuh']").append(response.recovered);
+    });
 
-    KasusHarian.innerHTML = '20000';
-    KasusHarianProv.innerHTML = '30000';
-    riskProv.innerHTML = '40000';
+    try {
+      const data = await fetch(
+        `${API_ENDPOINT.LOCATION('DKI Jakarta', 'Kota Jakarta Pusat')}`
+      );
+      const dataJson = await data.json();
+      const dataLocation = dataJson.data;
+
+      /* Remove Loader */
+      $('.loader').remove();
+
+      const cardItem = createTemplateCardVaksinasi(dataLocation);
+      $('.list-vaksinasi').append(cardItem);
+    } catch (error) {
+      console.log(error);
+    }
   },
 };
 
-export default Home;
+module.exports = Home;

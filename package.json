@@ -38,7 +38,8 @@
     "start": "concurrently \"npm:start-express\" \"npm:start-dev\"",
     "start-express": "nodemon src/scripts/server/server.js",
     "start-dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "server": "nodemon ./server.js"
   },
   "repository": {
     "type": "git",

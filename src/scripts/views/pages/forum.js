@@ -1,11 +1,11 @@
 const Forum = {
-  async render() {
+  render() {
     return `
         <h1>Forum</h1>
         `;
   },
 
-  async afterRender() {},
+  afterRender() {},
 };
 
 module.exports = Forum;
