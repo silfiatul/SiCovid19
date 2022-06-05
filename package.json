@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "autoprefixer": "^10.4.7",
     "bootstrap": "4.6",
     "concurrently": "^7.2.1",
     "ejs": "^3.1.8",
@@ -13,9 +12,6 @@
   "version": "1.0.0",
   "main": "server.js",
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
-    "babel-loader": "^8.1.0",
     "eslint": "^8.16.0",
     "eslint-config-airbnb-base": "^15.0.0"
   },
