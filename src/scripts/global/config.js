@@ -1,5 +1,4 @@
 const CONFIG = {
-  HOSTNAME: 'localhost',
   PORT: process.env.PORT || 3000,
 };
 

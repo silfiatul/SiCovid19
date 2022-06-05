@@ -22,6 +22,6 @@ app.use('/', [
 // * Inisialisasi router
 app.use('/', router);
 
-app.listen(PORT, HOSTNAME, () => {
+app.listen(PORT, () => {
   console.log(`App running at http://localhost:${PORT}`);
 });
