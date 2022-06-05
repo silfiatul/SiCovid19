@@ -1,20 +1,23 @@
-const Home = require('../views/pages/home');
-const Forum = require('../views/pages/forum');
-const Login = require('../views/pages/login');
-const Signin = require('../views/pages/signin');
-
 const Handler = {
-  homePage: (req, res) => {
-    res.send(Home.render());
+  homePage: async (req, res) => {
+    res.render('home', {
+      layout: '../layout/main-layout',
+    });
   },
   forumPage: (req, res) => {
-    res.send(Forum.render());
+    res.render('forum', {
+      layout: '../layout/main-layout',
+    });
   },
   loginPage: (req, res) => {
-    res.send(Login.render());
+    res.render('login', {
+      layout: '../layout/main-layout',
+    });
   },
   signinPage: (req, res) => {
-    res.send(Signin.render());
+    res.render('signin', {
+      layout: '../layout/main-layout',
+    });
   },
 };
 
